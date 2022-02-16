@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<body>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <div class="form-group" style="position: absolute; top: 200px; right: 550px;">
+            <div class="form-group">
+                {{ form.username(class="form-control form-control-lg") }}<br>
+                {{ form.password(class="form-control form-control-lg") }}<br>
+            </div>
+        </div>
+        <div class="form-group" style="position: absolute; top: 300px; right: 600px;">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+
+    <a href="{{ url_for('register') }}" style="position: absolute; top: 350px; right: 610px;">Don't have an account</a>
+</body>
+{% endblock %}
